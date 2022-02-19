@@ -1,0 +1,22 @@
+.header {
+	background-color: var(--color-secondary);
+	height: 4rem;
+	padding: 0 1rem;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header-logo {
+	color: var(--color-primary);
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.user-img,
+.user-img img {
+	width: 2rem;
+	height: 2rem;
+}
