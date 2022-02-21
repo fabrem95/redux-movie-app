@@ -1,6 +1,6 @@
 import React from "react";
 
-const MovieCard = () => {
+const MovieCard = ({ data }) => {
 	return <div>Movie Card</div>;
 };
 
