@@ -1,6 +1,12 @@
 .movie-card-item {
 	background-color: var(--color-secondary);
 	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.movie-card-item:hover {
+	transform: scale(1.1);
+	transition: all 0.3s;
 }
 
 .movie-card-header {
