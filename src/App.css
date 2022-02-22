@@ -1,7 +1,11 @@
 .App {
-	text-align: center;
+	/* text-align: center; */
 }
 
 .layout-container {
 	margin: 0 1rem;
+}
+
+.movie-details-right {
+	margin-left: 30px;
 }
