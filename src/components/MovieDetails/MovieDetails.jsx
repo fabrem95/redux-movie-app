@@ -11,6 +11,7 @@ import {
 	fetchAsyncMovieOrShowDetails,
 	removeSelectedMovieOrShow,
 } from "../../features/Movies/MovieSlice";
+import Spinner from "../Spinner/Spinner";
 
 const MovieDetails = () => {
 	const { imdbID } = useParams();
@@ -26,7 +27,9 @@ const MovieDetails = () => {
 		};
 	}, [dispatch, imdbID]);
 
-	return (
+	let renderData = !Object.keys(data).length ? (
+		<Spinner />
+	) : (
 		<section className="movie-details-section">
 			<div className="movie-details-left">
 				<div className="movie-details-title">{data.Title}</div>
@@ -73,6 +76,8 @@ const MovieDetails = () => {
 			</div>
 		</section>
 	);
+
+	return renderData;
 };
 
 export default MovieDetails;

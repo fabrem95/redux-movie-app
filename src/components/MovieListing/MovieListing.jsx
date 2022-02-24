@@ -6,6 +6,7 @@ import "./MovieListing.css";
 
 //Componentes
 import MovieCard from "../MovieCard/MovieCard";
+import Spinner from "../Spinner/Spinner";
 
 const MovieListing = () => {
 	const movies = useSelector((state) => state.movies.movies);
@@ -32,18 +33,24 @@ const MovieListing = () => {
 				<h3>{shows.Error}</h3>
 			</div>
 		);
-	return (
-		<div className="movie-wrapper">
-			<div className="movie-list">
-				<h2>Movies</h2>
-				<div className="movie-container">{renderMovies}</div>
+
+	let renderData =
+		!renderShows.length || !renderMovies.length ? (
+			<Spinner />
+		) : (
+			<div className="movie-wrapper">
+				<div className="movie-list">
+					<h2>Movies</h2>
+					<div className="movie-container">{renderMovies}</div>
+				</div>
+				<div className="movie-list">
+					<h2>Shows</h2>
+					<div className="movie-container">{renderShows}</div>
+				</div>
 			</div>
-			<div className="movie-list">
-				<h2>Shows</h2>
-				<div className="movie-container">{renderShows}</div>
-			</div>
-		</div>
-	);
+		);
+
+	return renderData;
 };
 
 export default MovieListing;
