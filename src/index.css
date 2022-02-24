@@ -1,6 +1,8 @@
 :root {
 	--color-primary: rgb(4 83 125);
 	--color-secondary: rgb(27, 23, 44);
+	--color-primary-font: black;
+	--color-secondary-font: white;
 }
 
 * {

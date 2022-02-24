@@ -1,11 +1,11 @@
 .movie-list {
-	margin: 0.5rem 0;
+	margin: 2.5rem 0;
 }
 
 .movie-list h2 {
-	color: white;
+	color: var(--color-secondary-font);
 	margin-bottom: 0.5rem;
-	font-weight: 400;
+	font-weight: bold;
 }
 
 .movie-container {
