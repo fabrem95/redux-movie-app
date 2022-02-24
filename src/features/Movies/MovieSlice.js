@@ -39,6 +39,8 @@ const initialState = {
 	movies: {},
 	shows: {},
 	selectedMovieOrShow: {},
+	status: "idle",
+	error: "",
 };
 
 const movieSlice = createSlice({
@@ -50,23 +52,25 @@ const movieSlice = createSlice({
 		},
 	},
 	extraReducers: {
-		[fetchAsyncMovies.pending]: () => {
+		[fetchAsyncMovies.pending]: (state) => {
 			console.log("Pending...");
+			return { ...state, status: "loading" };
 		},
 		[fetchAsyncMovies.fulfilled]: (state, { payload }) => {
 			console.log("Fetched Movies Succesfully!");
-			return { ...state, movies: payload };
+			return { ...state, movies: payload, status: "succeeded" };
 		},
-		[fetchAsyncMovies.rejected]: () => {
+		[fetchAsyncMovies.rejected]: (state, { payload }) => {
 			console.log("Fetch Rejected!");
+			return { ...state, error: payload, status: "failed" };
 		},
 		[fetchAsyncShows.fulfilled]: (state, { payload }) => {
 			console.log("Fetched Shows Succesfully!");
-			return { ...state, shows: payload };
+			return { ...state, shows: payload, status: "succeeded" };
 		},
 		[fetchAsyncMovieOrShowDetails.fulfilled]: (state, { payload }) => {
 			console.log("Fetched Shows Succesfully!");
-			return { ...state, selectedMovieOrShow: payload };
+			return { ...state, selectedMovieOrShow: payload, status: "succeeded" };
 		},
 	},
 });
