@@ -2,6 +2,9 @@
 	background-color: var(--color-secondary);
 	cursor: pointer;
 	transition: all 0.3s;
+	min-height: 3rem;
+	height: 100%;
+	margin: 0.5rem;
 }
 
 .movie-card-item:hover {
