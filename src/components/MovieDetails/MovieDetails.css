@@ -42,3 +42,19 @@
 .movie-details-info > div span {
 	color: var(--color-secondary-font);
 }
+
+.fa-star {
+	color: orange;
+}
+
+.fa-check-to-slot {
+	color: #2fbb01;
+}
+
+.fa-clock {
+	color: #040404;
+}
+
+.fa-calendar {
+	color: #6393ff;
+}

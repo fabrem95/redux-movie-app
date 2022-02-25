@@ -46,10 +46,16 @@
 }
 
 .header-search-bar form button {
+	color: var(--color-secondary-font);
+	background-color: transparent;
+	border-style: none;
+	margin: 0 0.5rem;
 	padding: 8px 0px;
 	font-size: 20px;
 	cursor: pointer;
 	height: 38px;
+
+	display: flex;
 }
 
 .user-img,

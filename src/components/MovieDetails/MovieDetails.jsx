@@ -38,13 +38,14 @@ const MovieDetails = () => {
 						IMBD Rating <i className="fa fa-star"></i> : {data.imdbRating}
 					</span>
 					<span>
-						IMBD Votes <i className="fa fa-star"></i> : {data.imdbVotes}
+						IMBD Votes <i className="fa fa-check-to-slot"></i> :{" "}
+						{data.imdbVotes}
 					</span>
 					<span>
-						Runtime <i className="fa fa-star"></i> : {data.Runtime}
+						Runtime <i className="fa fa-clock"></i> : {data.Runtime}
 					</span>
 					<span>
-						Year <i className="fa fa-star"></i> : {data.Year}
+						Year <i className="fa fa-calendar"></i> : {data.Year}
 					</span>
 				</div>
 				<div className="movie-details-plot">{data.Plot}</div>
