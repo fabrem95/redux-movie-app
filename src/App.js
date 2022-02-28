@@ -5,6 +5,8 @@ import {
 	Routes,
 	Switch,
 } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./features/store";
 
 //Estilos
 import "./App.css";
@@ -18,19 +20,21 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
 	return (
-		<div className="App">
-			<Router>
-				<Header></Header>
-				<div className="layout-container">
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/movie/:imdbID" element={<MovieDetails />} />
-						<Route path="*" element={<PageNotFound404 />} />
-					</Routes>
-				</div>
-				<Footer></Footer>
-			</Router>
-		</div>
+		<Provider store={store}>
+			<div className="App">
+				<Router>
+					<Header></Header>
+					<div className="layout-container">
+						<Routes>
+							<Route path="/" element={<Home />} />
+							<Route path="/movie/:imdbID" element={<MovieDetails />} />
+							<Route path="*" element={<PageNotFound404 />} />
+						</Routes>
+					</div>
+					<Footer></Footer>
+				</Router>
+			</div>
+		</Provider>
 	);
 }
 
