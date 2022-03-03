@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import "./Header.css";
 import film_png from "../../assets/images/film.png";
 import user_png from "../../assets/images/user.png";
+import { useSelector } from "react-redux";
 
 //Slices
 import {
@@ -15,7 +16,7 @@ import {
 
 const Header = () => {
 	const dispatch = useDispatch();
-
+	const slectedMovieOrShow = useSelector(state => state.movies.selectedMovieOrShow)
 	const [term, setTerm] = useState("");
 
 	function handleSearchSubmit(e) {
@@ -34,7 +35,7 @@ const Header = () => {
 				</div>
 				<div className="header-logo">Movie App</div>
 			</Link>
-			<div className="header-search-bar">
+			{!Object.keys(slectedMovieOrShow).length && <div className="header-search-bar">
 				<form onSubmit={handleSearchSubmit}>
 					<input
 						type="text"
@@ -46,7 +47,7 @@ const Header = () => {
 						<i className="fa fa-search"></i>
 					</button>
 				</form>
-			</div>
+			</div>}
 			<div className="user-img">
 				<img src={user_png} alt="Imagen de Usuario" />
 			</div>
