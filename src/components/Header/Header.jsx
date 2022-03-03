@@ -42,7 +42,7 @@ const Header = () => {
 						placeholder="Search Movies or Shows"
 						onChange={(e) => setTerm(e.target.value)}
 					/>
-					<button type="submit">
+					<button type="submit" role='search-button'>
 						<i className="fa fa-search"></i>
 					</button>
 				</form>

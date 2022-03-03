@@ -1,12 +1,10 @@
 import React from "react";
 import {
-	BrowserRouter as Router,
-	Route,
-	Routes,
-	Switch,
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Switch,
 } from "react-router-dom";
-import { Provider } from "react-redux";
-import { store } from "./features/store";
 
 //Estilos
 import "./App.css";
@@ -19,23 +17,21 @@ import PageNotFound404 from "./components/404PageNotFound/404PageNotFound";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-	return (
-		<Provider store={store}>
-			<div className="App">
-				<Router>
-					<Header></Header>
-					<div className="layout-container">
-						<Routes>
-							<Route path="/" element={<Home />} />
-							<Route path="/movie/:imdbID" element={<MovieDetails />} />
-							<Route path="*" element={<PageNotFound404 />} />
-						</Routes>
-					</div>
-					<Footer></Footer>
-				</Router>
-			</div>
-		</Provider>
-	);
+  return (
+    <div className="App">
+      <Router>
+        <Header></Header>
+        <div className="layout-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/movie/:imdbID" element={<MovieDetails />} />
+            <Route path="*" element={<PageNotFound404 />} />
+          </Routes>
+        </div>
+        <Footer></Footer>
+      </Router>
+    </div>
+  );
 }
 
 export default App;

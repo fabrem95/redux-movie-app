@@ -5,7 +5,7 @@ import "./Spinner.css";
 
 function Spinner() {
 	return (
-		<div className="spinner-container">
+		<div role='loader' className="spinner-container">
 			<div id="img1" className="img"></div>
 			<div id="img2" className="img"></div>
 			<div id="img3" className="img"></div>

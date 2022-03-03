@@ -7,7 +7,7 @@ import "./MovieCard.css";
 const MovieCard = ({ data }) => {
 	return (
 		<div className="movie-card-item">
-			<Link to={`/movie/${data.imdbID}`}>
+			<Link to={`/movie/${data.imdbID}`} role='link-to-movie'>
 				<section className="movie-card-inner">
 					<header className="movie-card-header">
 						<img src={data.Poster} alt={data.Title} />

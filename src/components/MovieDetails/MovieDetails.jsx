@@ -30,7 +30,7 @@ const MovieDetails = () => {
 	let renderData = !Object.keys(data).length ? (
 		<Spinner />
 	) : (
-		<section className="movie-details-section">
+		<section className="movie-details-section" role='movie-info'>
 			<div className="movie-details-left">
 				<div className="movie-details-title">{data.Title}</div>
 				<div className="movie-details-rating">
