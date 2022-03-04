@@ -27,9 +27,7 @@ const MovieDetails = () => {
 		};
 	}, [dispatch, imdbID]);
 
-	let renderData = !Object.keys(data).length ? (
-		<Spinner />
-	) : (
+	let renderMovieOrShow = data.Response === "True" ? (
 		<section className="movie-details-section" role='movie-info'>
 			<div className="movie-details-left">
 				<div className="movie-details-title">{data.Title}</div>
@@ -76,7 +74,15 @@ const MovieDetails = () => {
 				<img src={data.Poster} alt={data.Title} />
 			</div>
 		</section>
+	) : (
+		<div className="movies-error">
+			<h3>{data.Error}</h3>
+		</div>
 	);
+
+	let renderData = !Object.keys(data).length ? (
+		<Spinner />
+	) : (renderMovieOrShow);
 
 	return renderData;
 };
