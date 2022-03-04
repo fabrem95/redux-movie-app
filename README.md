@@ -44,4 +44,4 @@ The app consist of a home page, where it lists different kinds of movies and sho
 When the user selects one of them, the details page shows up, wich contains different kind of information about it, like rating, votes, runtime, year of release, plot, etc.
 The user can also use the search bar in the header of the page in order to look for the desired movies or shows.
 
-![Alt Text](https://imgur.com/I5fNoVu.gif)
+<img src="src\assets\gifs\chrome_XW6dtTNWTU.gif?raw=true" width="800" height="300" />
