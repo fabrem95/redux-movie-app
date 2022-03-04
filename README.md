@@ -42,4 +42,6 @@ Your app is ready to be deployed!
 
 The app consist of a home page, where it lists different kinds of movies and shows.
 When the user selects one of them, the details page shows up, wich contains different kind of information about it, like rating, votes, runtime, year of release, plot, etc.
-The user can also use the search bar in the header of the pago in order to look for the desired movies or shows.
+The user can also use the search bar in the header of the page in order to look for the desired movies or shows.
+
+![Alt Text](https://imgur.com/I5fNoVu.gif)
